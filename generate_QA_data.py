@@ -1,9 +1,3 @@
-"""
-Created on 2025/12/20 by RenHaodong
-Description:
-    用于从爬取的文件中，提取QA对，用于LORA微调
-"""
-
 import requests
 from typing import *
 import json
@@ -107,5 +101,5 @@ if __name__ == '__main__':
         print("file_{}_{}QA对生成完毕，目前共搜集QA对{}条".format(file_index,file, len(all_QA_data)))
         print("--------------------------------------------------------------------------------")
 
-    with open('./cpc_history_qa.json', 'w', encoding='utf-8') as f:
+    with open('data/cpc_history_qa.json', 'w', encoding='utf-8') as f:
         json.dump(all_QA_data, f, ensure_ascii=False, indent=2)
